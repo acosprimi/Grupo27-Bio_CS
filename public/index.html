@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12344d">
+  <meta name="description" content="Gestión operativa de pacientes, órdenes, muestras y resultados de BioTest Diagnósticos S.A.S.">
+  <title>BioTest Diagnósticos S.A.S. | Gestión clínica</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div id="login-screen" class="login-layout">
+    <section class="login-brand" aria-label="Información institucional">
+      <div class="brand-lockup">
+        <div class="brand-mark" aria-hidden="true">BT</div>
+        <div class="brand-name">BioTest <span>DIAGNÓSTICOS S.A.S.</span></div>
+      </div>
+      <div class="login-copy">
+        <p class="eyebrow"><span class="eyebrow-rule"></span> SISTEMA DE GESTIÓN DE LABORATORIO</p>
+        <h1>Precisión en cada muestra.<br><em>Confianza en cada resultado.</em></h1>
+        <p>Un espacio de trabajo integrado para coordinar la atención, la trazabilidad de muestras y la gestión de resultados clínicos.</p>
+      </div>
+      <div class="login-brand-bottom">
+        <div class="brand-assurance"><span class="assurance-icon" aria-hidden="true">✓</span><span><b>Información organizada</b><small>Accesos según el rol institucional</small></span></div>
+        <div class="login-foot">BioTest Diagnósticos S.A.S. <span>·</span> Grupo 27, calidad de software</div>
+      </div>
+      <div class="brand-decoration decoration-one" aria-hidden="true"></div>
+      <div class="brand-decoration decoration-two" aria-hidden="true"></div>
+    </section>
+    <section class="login-panel">
+      <div class="login-panel-inner">
+        <div class="small-brand"><span class="small-brand-mark">BT</span><span>Portal institucional</span></div>
+        <div class="login-heading"><p class="eyebrow">BIENVENIDO/A</p><h2>Iniciar sesión</h2><p class="muted">Utiliza las credenciales asignadas a tu cuenta.</p></div>
+        <form id="login-form" autocomplete="on">
+          <label for="login-email">Correo electrónico<input id="login-email" name="email" type="email" autocomplete="username" required placeholder="nombre@biotest.com"></label>
+          <label for="login-password">Contraseña<input id="login-password" name="password" type="password" autocomplete="current-password" required placeholder="Escribe tu contraseña"></label>
+          <div id="login-error" class="form-error" role="alert" aria-live="polite"></div>
+          <button class="primary login-submit" type="submit">Ingresar al sistema <span aria-hidden="true">→</span></button>
+        </form>
+        <section id="local-access" class="local-access hidden" aria-label="Acceso inicial local"></section>
+        <div class="security-note"><span class="security-shield" aria-hidden="true">▣</span><span><b>Acceso institucional</b><small>Tu sesión se gestiona de forma controlada.</small></span></div>
+        <div class="login-mobile-group">Grupo 27, calidad de software</div>
+      </div>
+    </section>
+  </div>
+
+  <div id="app-shell" class="shell hidden">
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-brand">
+        <div class="brand-mark small" aria-hidden="true">BT</div>
+        <div class="brand-name">BioTest<span>DIAGNÓSTICOS S.A.S.</span></div>
+        <button id="collapse-sidebar" class="sidebar-collapse" type="button" aria-label="Contraer navegación" title="Contraer navegación">‹</button>
+      </div>
+      <div class="site-chip"><span class="site-dot" aria-hidden="true"></span><span><b>Sede principal</b><small>Laboratorio clínico</small></span><span class="chevron" aria-hidden="true">⌄</span></div>
+      <div class="nav-label">OPERACIÓN</div>
+      <nav id="navigation" aria-label="Navegación principal">
+        <button class="nav-item active" data-page="dashboard"><span class="nav-icon" data-icon="layout"></span><span class="nav-text">Panel general</span></button>
+        <button class="nav-item" data-page="patients"><span class="nav-icon" data-icon="users"></span><span class="nav-text">Pacientes</span></button>
+        <button class="nav-item" data-page="appointments"><span class="nav-icon" data-icon="calendar"></span><span class="nav-text">Agenda de citas</span></button>
+        <button class="nav-item" data-page="exams"><span class="nav-icon" data-icon="flask"></span><span class="nav-text">Catálogo de exámenes</span></button>
+        <button class="nav-item" data-page="orders"><span class="nav-icon" data-icon="clipboard"></span><span class="nav-text">Órdenes</span></button>
+        <button class="nav-item" data-page="samples"><span class="nav-icon" data-icon="sample"></span><span class="nav-text">Muestras</span></button>
+        <button class="nav-item clinical-only" data-page="results"><span class="nav-icon" data-icon="file-check"></span><span class="nav-text">Resultados clínicos</span></button>
+        <div class="nav-label nav-label-secondary">ADMINISTRACIÓN</div>
+        <button class="nav-item" data-page="documents"><span class="nav-icon" data-icon="folder"></span><span class="nav-text">Documentos</span></button>
+        <button class="nav-item billing-only" data-page="billing"><span class="nav-icon" data-icon="receipt"></span><span class="nav-text">Facturación</span></button>
+        <button class="nav-item admin-only" data-page="reports"><span class="nav-icon" data-icon="chart"></span><span class="nav-text">Reportes e indicadores</span></button>
+        <button class="nav-item admin-only" data-page="users"><span class="nav-icon" data-icon="user-cog"></span><span class="nav-text">Usuarios y permisos</span></button>
+        <button class="nav-item admin-only" data-page="audit"><span class="nav-icon" data-icon="history"></span><span class="nav-text">Auditoría</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="help-panel"><div class="help-icon" aria-hidden="true">i</div><b>¿Necesitas ayuda?</b><p>Comunícate con el administrador de tu sede para consultar los procedimientos de trabajo.</p></div>
+        <div class="version"><span class="version-dot"></span> BioTest Gestión Clínica <span class="version-number">Versión 2.1.0</span></div>
+      </div>
+    </aside>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left"><button id="mobile-menu" class="icon-button mobile-menu" type="button" aria-label="Abrir navegación" title="Abrir navegación"><span data-icon="menu"></span></button><div class="breadcrumbs"><span>BioTest</span><b aria-hidden="true">/</b><strong id="crumb-current">Panel general</strong></div></div>
+        <div class="top-actions">
+          <span id="system-status" class="status-label"><i></i><span>Verificando sistema…</span></span>
+          <button id="notifications-button" class="icon-button notification-button" type="button" aria-label="Consultar pendientes" title="Consultar pendientes"><span data-icon="bell"></span><i id="notification-dot" class="notification-dot hidden"></i></button>
+          <div class="user-menu"><div class="avatar" id="user-avatar">BT</div><div class="user-ident"><b id="user-name">Usuario</b><small id="user-role">Rol</small></div><button id="logout-button" class="logout" type="button" title="Cerrar sesión" aria-label="Cerrar sesión"><span data-icon="logout"></span></button></div>
+        </div>
+      </header>
+      <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
+      <div id="demo-banner" class="demo-banner hidden" role="note"></div>
+      <section id="page-content" class="content" aria-live="polite"></section>
+      <footer class="app-footer"><span>© BioTest Diagnósticos S.A.S.</span><span>Grupo 27, calidad de software <i aria-hidden="true"></i> Gestión de información institucional</span></footer>
+    </main>
+  </div>
+
+  <div id="modal" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-card"><div class="modal-head"><div><p class="eyebrow">BIOTEST · GESTIÓN INSTITUCIONAL</p><h2 id="modal-title">Nuevo registro</h2></div><button id="modal-close" class="icon-button close-modal" type="button" aria-label="Cerrar ventana">×</button></div><div id="modal-body"></div></div>
+  </div>
+  <script src="/app.js" defer></script>
+</body>
+</html>
